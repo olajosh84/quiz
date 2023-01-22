@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+    <head>
+        <title>Quiz</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="index.html" title="Back Home"><button class="logo-btn" >olajeks</button></a>
+            <div class="digit-btns">
+                <button class="switch-btn">
+                    <span>dark</span>
+                    <span>light</span>
+                    <span class="switch"></span>
+                </button>
+                
+                <button class="digit">0</button>
+                <button class="digit">0</button>
+                <span class="separator">:</span>
+                <button class="digit">0</button>
+                <button class="digit">0</button>
+            </div>
+        </nav>
+        <div class="alert">
+            <!--alert message goes here-->
+        </div>
+        
+        <section id="test-questions">
+            <header class="header">
+                <h2 class="title">general knowledge quiz</h2> 
+                <div class="underline"></div>
+            </header>
+             <div class="keys">
+                <!--<h4>KEYS:</h4>-->
+                <div class="key key-wrong"><i class="fas fa-times"></i></div>
+                <div class="key key-correct"><i class="fas fa-check"></i></div>
+             </div>
+             <div class="questions">
+                <ol>
+                   <!--test questions go here-->
+                </ol>
+             </div>
+             <button class="btn submit-btn" id="submit">submit</button>
+        </section>
+        <div class="result">
+            <!--test result goes here-->
+            <button id="check-mark">
+                <i class="fas fa-check"></i>
+            </button>
+            <h2>Thank you for taking the quiz!</h2>
+            <p>Your total score is</p>
+            <h2 id="score">100%</h2>
+            <a href="index.html"><button class="result-btn home-btn">go back home</button></a>
+            <button class="result-btn retake-btn">take another quiz</button>
+        </div>
+        <div class="loading">
+            <h4>Calculating your score</h4>
+            <img src="./assets/images/loading.gif" alt="loading gif">
+        </div>
+       <a href="#home" class="top-link" title="To The Top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <script src="./assets/js/data.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/confetti.js"></script>
+    </body>
+</html>
