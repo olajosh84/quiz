@@ -7,8 +7,8 @@ const submitBtn = document.getElementById('submit');
 const testQuestions = document.querySelector('#test-questions');
 const result = document.querySelector('.result');
 
-//set the count down time to 5 minutes  
-let countDownTime = 3 * 60;
+//set the count down time to 2 minutes  
+let countDownTime = 2 * 60;
 let autoTime; //for setInerval
 
 
