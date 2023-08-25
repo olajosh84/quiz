@@ -84,6 +84,12 @@ body{
     border: 1px solid #f82249;
     color: #fff;
 }
+.logo{
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .logo-btn{
     background-color: transparent;
     padding: 0.25rem 0.5rem;
@@ -110,7 +116,7 @@ body{
 }
 .navbar{
     width: 100%;
-    background: #fff /*#3e8da8*/; 
+    background: var(--quest-bg-color) /*#3e8da8*/; 
     position: fixed;
     top: 0;
     left: 0;
@@ -499,6 +505,9 @@ top link button
     }
 }
 @media screen and (min-width: 420px){
+    .logo{
+        width: 8rem;
+    }
     .logo-btn{
         padding: 0.5rem 1rem;
         font-size: 0.85rem;
