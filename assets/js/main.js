@@ -32,6 +32,19 @@ window.addEventListener('DOMContentLoaded', (e) => {
         
         })
     })
+
+    /*check color mode in local storage and apply accordingly*/
+    let colorMode = localStorage.getItem('darkMode');
+    if(colorMode){
+        switchBtn.classList.add('slide');
+        document.body.classList.add('dark-mode');
+        //testQuestions.classList.toggle('dark-mode');
+    } else {
+        switchBtn.classList.remove('slide');
+        document.body.classList.remove('dark-mode');
+        //testQuestions.classList.remove('dark-mode');
+    }
+    
 })
 
 
@@ -108,12 +121,6 @@ function loadQuestions() {
 }
 
 
-
-
-
-
-
-
 //button select function
 function selectedBtn(selectedBtn){
     const selectedId = selectedBtn.dataset.id;
@@ -147,7 +154,8 @@ function selectedBtn(selectedBtn){
 switchBtn.onclick = (e) => {
     e.currentTarget.classList.toggle('slide')
     document.body.classList.toggle('dark-mode');
-    testQuestions.classList.toggle('dark-mode');
+    //testQuestions.classList.toggle('dark-mode');
+    e.currentTarget.classList.contains('slide') ? localStorage.setItem('darkMode', true) : localStorage.removeItem('darkMode')
  }
 
 const retakeBtn = document.querySelector('.retake-btn');
